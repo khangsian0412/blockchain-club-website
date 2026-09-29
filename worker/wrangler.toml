@@ -6,6 +6,7 @@ compatibility_date = "2026-09-29"
 ALLOWED_ORIGIN = "http://localhost:3000"
 MEMBERSHIP_CONTRACT = "0x321D7592f728f77ebbDCf5B504D0F36Ac5caa6c8"
 SEPOLIA_RPC_URL = "https://ethereum-sepolia-rpc.publicnode.com"
+ADMIN_WALLETS = "0xC572f8F898420A9B276b8De186b4136D68DC3eb7"
 
 [[d1_databases]]
 binding = "nus_blockchain_club_events"

@@ -60,6 +60,26 @@ NEXT_PUBLIC_EVENTS_API_URL=https://nus-blockchain-club-events.<your-subdomain>.w
 
 Before deploying the website to Fleek, change `ALLOWED_ORIGIN` to the final site URL (without a trailing slash), redeploy the Worker, then run the static deployment build.
 
+## Forum threads
+
+The forum uses the same Worker and D1 database as the events board. Apply the latest migration and deploy the Worker to activate shared member-created discussions:
+
+```bash
+cd worker
+npx wrangler d1 migrations apply nus-blockchain-club-events --remote
+npx wrangler deploy
+```
+
+Visitors can read discussions. Creating a thread requires a signed request from a wallet that holds the Sepolia membership token.
+
+Replies and moderation use the next D1 migration. The configured moderator wallet is the club's Privy wallet, `0xC572f8F898420A9B276b8De186b4136D68DC3eb7`. To add further moderators later, set `ADMIN_WALLETS` in `worker/wrangler.toml` to a comma-separated list of wallet addresses, then update the matching `NEXT_PUBLIC_ADMIN_WALLETS` value before rebuilding the website.
+
+```bash
+cd worker
+npx wrangler d1 migrations apply nus-blockchain-club-events --remote
+npx wrangler deploy
+```
+
 ## Static deployment
 
 The Next.js app is configured with `output: 'export'`. Run `npm run build`, then upload the generated `out/` directory to Fleek/IPFS.

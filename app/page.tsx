@@ -9,7 +9,7 @@ export default function Home() {
     <main>
       <nav>
         <a className="brand" href="#top"><img src="/nus-blockchain-logo.jpg" alt="NUS Blockchain Club logo" />NUS Blockchain Club</a>
-        <span className="phase">SINGAPORE · 2026</span>
+        <div className="nav-controls"><Link className="forum-link" href="/forum">Forum ↗</Link><span className="phase">SINGAPORE · 2026</span></div>
       </nav>
       <section id="top" className="hero">
         <p className="eyebrow">NATIONAL UNIVERSITY OF SINGAPORE</p>
