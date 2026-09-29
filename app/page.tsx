@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main>
       <nav>
-        <a className="brand" href="#top"><span>⬡</span> NUS Blockchain Club</a>
+        <a className="brand" href="#top"><img src="/nus-blockchain-logo.jpg" alt="NUS Blockchain Club logo" />NUS Blockchain Club</a>
         <span className="phase">SINGAPORE · 2026</span>
       </nav>
       <section id="top" className="hero">
@@ -16,8 +16,7 @@ export default function Home() {
         <h1>Welcome to<br /><em>NUS Blockchain Club.</em></h1>
         <p className="lede">A student community for the curious, the technical, and everyone building a more open internet.</p>
         <div className="actions">
-          <a className="hero-link" href="#welcome">Start here ↓</a>
-          <a href="#news">Club news ↓</a>
+          <MembershipExperience contractAddress={membershipContract} triggerOnly />
         </div>
       </section>
       <section id="welcome" className="welcome-grid">
@@ -27,10 +26,6 @@ export default function Home() {
           <p>Whether you are exploring wallets for the first time or prototyping your next on-chain idea, this is your campus home for practical blockchain learning, thoughtful conversations, and generous collaboration.</p>
           <p>Come for a workshop, stay for the people you meet while making something real.</p>
         </article>
-        <aside className="account-area" aria-label="Club membership">
-          <p className="number">YOUR CLUB ACCESS</p>
-          <MembershipExperience contractAddress={membershipContract} />
-        </aside>
       </section>
       <section id="architecture" className="grid">
         <article className="feature primary">
@@ -38,22 +33,6 @@ export default function Home() {
           <h2>Soulbound<br />membership</h2>
           <p>Every verified student receives one ERC-5192 token. It cannot be sold, transferred, or separated from its owner.</p>
           <div className="token">CLUB <b>•</b> ERC-5192</div>
-        </article>
-        <article className="feature">
-          <p className="number">WHAT IS LIVE</p>
-          <h3>Contract foundation</h3>
-          <ul>
-            <li>OpenZeppelin ERC-721 base</li>
-            <li>EIP-5192 <code>locked()</code> interface</li>
-            <li>Transfers revert by design</li>
-            <li>Static-export-ready Next.js app</li>
-          </ul>
-        </article>
-        <article className="feature status">
-          <p className="number">NETWORK STATUS</p>
-          <p className="muted">Membership contract</p>
-          <code>{membershipContract || "Not configured"}</code>
-          <div className={`status-dot ${membershipContract ? "live" : ""}`}>{membershipContract ? "Ready to verify" : "Awaiting deployment"}</div>
         </article>
       </section>
       <section id="news" className="news-section">
