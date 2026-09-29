@@ -1,0 +1,14 @@
+name = "nus-blockchain-club-events"
+main = "src/index.js"
+compatibility_date = "2026-09-29"
+
+[vars]
+ALLOWED_ORIGIN = "http://localhost:3000"
+MEMBERSHIP_CONTRACT = "0x321D7592f728f77ebbDCf5B504D0F36Ac5caa6c8"
+SEPOLIA_RPC_URL = "https://ethereum-sepolia-rpc.publicnode.com"
+
+[[d1_databases]]
+binding = "nus_blockchain_club_events"
+database_name = "nus-blockchain-club-events"
+database_id = "63b52685-6f0c-4639-bbc8-659ca72e458e"
+migrations_dir = "migrations"

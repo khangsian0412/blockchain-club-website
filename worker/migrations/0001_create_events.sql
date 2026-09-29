@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS events (
+  id TEXT PRIMARY KEY,
+  url TEXT NOT NULL UNIQUE,
+  label TEXT NOT NULL,
+  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS events_created_at ON events(created_at DESC);

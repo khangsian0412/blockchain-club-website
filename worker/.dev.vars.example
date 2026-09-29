@@ -1,0 +1,3 @@
+MEMBERSHIP_CONTRACT=0x321D7592f728f77ebbDCf5B504D0F36Ac5caa6c8
+SEPOLIA_RPC_URL=https://ethereum-sepolia-rpc.publicnode.com
+ALLOWED_ORIGIN=http://localhost:3000

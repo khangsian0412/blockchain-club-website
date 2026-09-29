@@ -1,0 +1,10 @@
+[profile.default]
+src = "contracts/src"
+test = "contracts/test"
+out = "contracts/out"
+libs = ["lib"]
+# The contract pragma remains ^0.8.20. OpenZeppelin's current v5 release requires >=0.8.24.
+solc_version = "0.8.24"
+
+[fmt]
+line_length = 100

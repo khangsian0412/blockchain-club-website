@@ -1,0 +1,8 @@
+node_modules/
+.next/
+out/
+.env.local
+worker/.dev.vars
+lib/
+contracts/out/
+contracts/cache/
